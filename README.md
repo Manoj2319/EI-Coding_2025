@@ -1,57 +1,60 @@
-# Smart Home Application
+# Coding Exercise 2025–26  
 
-This project is a small command-line based Smart Hub that manages devices (lights, thermostats, door locks, cameras, speakers). It demonstrates common OOP patterns: factory, proxy, observer, triggers, and scheduler.
+This repository contains Java implementations and demos for **classic software design patterns** and a **Smart Home Application** simulation system. The content is organized into two main sections:  
 
-# Class Diagram
+---
 
-<img src="ClassDiagram.png">
+## Exercise 1: Design Patterns  
 
-## Features
+System design is the process of planning, structuring and defining the architecture of Software System.  
 
-- Device abstraction via `IDevice` and `AbstractDevice`.
-- Concrete device types: `Light`, `Thermostat`, `DoorLock`, `SecurityCamera`, `Speaker`.
-- `DeviceFactory` to create devices by type.
-- `DeviceProxy` enforces simple access control before delegating to real devices.
-- `SmartHubService` manages devices, observers, scheduled actions, and triggers.
-- `Trigger` allows condition+action automation evaluated periodically by the hub.
-- Centralized logging via `LoggerConfig`.
+### Structure  
 
-## Project structure (key files)
+- **Behavioural Design Pattern**  
+Behavioral design pattern focus on the interactions and communication between objects.
+  - **Iterator Pattern**: Custom iterator for a book collection.  
+  - **Template Pattern**: Game loader using the template method pattern.  
 
-- `com.smarthome.Main` — CLI entry point.
-- `com.smarthome.service.SmartHubService` — hub/service that manages devices and triggers.
-- `com.smarthome.factory.DeviceFactory` — factory for creating devices.
-- `com.smarthome.proxy.DeviceProxy` — proxy wrapper for access control.
-- `com.smarthome.model.*` — device models and interfaces:
-  - `IDevice`, `AbstractDevice`, `Light`, `Thermostat`, `DoorLock`, `SecurityCamera`, `Speaker`.
-- `com.smarthome.trigger.Trigger` — encapsulates condition and action.
-- `com.smarthome.util.LoggerConfig` — logging configuration.
-- `com.smarthome.exception.DeviceOperationException` — device operation errors.
+- **Creational Design Pattern**  
+Creational Design Patterns focus on the process of object creation or problems related to object creation.
+  - **Builder Pattern**: Flexible computer builder for gaming PCs and workstations.  
+  - **Factory Pattern**: Notification system supporting Email and SMS.  
 
-## Design notes
-
-- The application demonstrates:
-  - Inheritance and polymorphism: `AbstractDevice` provides a common implementation; concrete devices extend and override as needed.
-  - Interfaces for contracts: `IDevice`, `Observer`, `Subject`.
-  - Factory pattern: `DeviceFactory` centralizes device creation.
-  - Proxy pattern: `DeviceProxy` wraps devices for access checks.
-  - Observer pattern: `SmartHubService` acts as `Subject` and registers devices (observers).
-  - Trigger pattern: `Trigger` objects hold a `Predicate` and `Consumer` evaluated by the hub scheduler.
-
-## Run (Windows quick)
-
-From the repository root in Command Prompt or PowerShell you can run the following commands to compile and run the app:
-
-```powershell
-
-dir /S /B src\*.java > sources.txt
+- **Structural Design Pattern**  
+Structural Design Patterns are solutions in software design that focus on how classes and objects are organized to form larger, functional structures.
+  - **Facade Pattern**: Home theater system with a unified interface.  
+  - **Proxy Pattern**: Lazy-loading image viewer using the proxy pattern.  
 
 
-javac @sources.txt -d out
+
+## Exercise 2: Smart Home Application  
+
+A small **command-line based Smart Hub** that manages smart devices (lights, thermostats, door locks, cameras, speakers).  
+The system demonstrates common OOP and design patterns: **factory, proxy, observer, triggers, and scheduler**.  
+
+### Features  
+
+- Device abstraction via `IDevice` and `AbstractDevice`.  
+- Concrete device types: `Light`, `Thermostat`, `DoorLock`, `SecurityCamera`, `Speaker`.  
+- `DeviceFactory` to create devices by type.  
+- `DeviceProxy` enforces access control before delegating to real devices.  
+- `SmartHubService` manages devices, observers, scheduled actions, and triggers.  
+- `Trigger` allows condition + action automation evaluated periodically.  
+- Centralized logging via `LoggerConfig`.  
 
 
-java -cp out com.smarthome.Main
-```
+### Design Notes  
 
-Notes:
-- `out` will be created by `javac` as the target directory; remove it when you want a clean rebuild.
+- **Inheritance & Polymorphism**: `AbstractDevice` provides base implementation; concrete devices override as needed.  
+- **Interfaces as Contracts**: `IDevice`, `Observer`, `Subject`.  
+- **Factory Pattern**: Centralized device creation.  
+- **Proxy Pattern**: Access control wrapper for devices.  
+- **Observer Pattern**: `SmartHubService` acts as `Subject`, devices register as observers.  
+- **Trigger Pattern**: `Trigger` holds `Predicate` + `Consumer` evaluated by hub scheduler.  
+
+## Purpose  
+
+- **Learn and demonstrate** key software design patterns.  
+- **Practice** modular and maintainable Java programming.  
+- **Simulate real-world systems** (Smart Hub) using OOP and design principles.  
+
