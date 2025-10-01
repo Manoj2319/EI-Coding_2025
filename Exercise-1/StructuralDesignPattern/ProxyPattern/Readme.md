@@ -5,6 +5,9 @@ This project demonstrates the **Proxy Design Pattern** in Java using an Image Vi
 The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.  
 Here, the proxy delays the creation and loading of a `RealImage` until it is actually needed.
 
+## Class Diagram
+<img src="Class_Diagram.png">
+
 ## Components
 - **Subject Interface (Image)**  
   Declares the common method `display()` for images.
