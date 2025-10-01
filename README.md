@@ -11,20 +11,19 @@ System design is the process of planning, structuring and defining the architect
 ### Structure  
 
 - **Behavioural Design Pattern**  
-Behavioral design pattern focus on the interactions and communication between objects.
-  - **Iterator Pattern**: Custom iterator for a book collection.  
-  - **Template Pattern**: Game loader using the template method pattern.  
+  Behavioral patterns focus on communication and responsibility between objects.  
+  - **Observer Pattern**: Defines a one-to-many dependency so when one object changes state, all dependents are notified.  
+  - **Chain of Responsibility Pattern**: Passes a request along a chain of handlers, where each handler decides to process it or forward it.  
 
 - **Creational Design Pattern**  
-Creational Design Patterns focus on the process of object creation or problems related to object creation.
-  - **Builder Pattern**: Flexible computer builder for gaming PCs and workstations.  
-  - **Factory Pattern**: Notification system supporting Email and SMS.  
+  Creational patterns deal with object creation mechanisms.  
+  - **Singleton Pattern**: Ensures a class has only one instance and provides a global point of access.  
+  - **Factory Pattern**: Provides an interface for creating objects without specifying the exact class.  
 
 - **Structural Design Pattern**  
-Structural Design Patterns are solutions in software design that focus on how classes and objects are organized to form larger, functional structures.
-  - **Facade Pattern**: Home theater system with a unified interface.  
-  - **Proxy Pattern**: Lazy-loading image viewer using the proxy pattern.  
-
+  Structural patterns define how classes and objects are composed to form larger structures.  
+  - **Proxy Pattern**: Provides a surrogate or placeholder for another object to control access to it.  
+  - **Bridge Pattern**: Decouples an abstraction from its implementation so the two can vary independently.  
 
 
 ## Exercise 2: Smart Home Application  
