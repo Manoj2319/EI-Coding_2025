@@ -4,7 +4,7 @@ This project is a small command-line based Smart Hub that manages devices (light
 
 # Class Diagram
 
-<img src="Class Diagram.png">
+<img src="ClassDiagram.png">
 
 ## Features
 
