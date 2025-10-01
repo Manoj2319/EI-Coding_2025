@@ -7,7 +7,9 @@ Here, a `Logger` class is implemented as a singleton so that all parts of the ap
 # Class Diagram
 
 <img src="Class_Diagram.png">
-## Components
+
+## Components 
+
 * **Singleton (Logger)**
   - Provides a single, globally accessible instance for logging.
   - Thread-safe implementation using **double-checked locking**.
