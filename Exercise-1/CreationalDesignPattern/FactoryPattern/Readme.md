@@ -40,7 +40,7 @@ but allows subclasses (or specific types) to alter the type of objects that will
    ```bash
    javac src/*.java
    cd src
-   java SingletonPatternDemo  
+   java FactoryPatternDemo  
 2. Enter a notification type (`email`, `sms`, `push`) and a message.  
 3. Observe the notification being sent via the chosen channel.  
 
